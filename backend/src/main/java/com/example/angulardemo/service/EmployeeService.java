@@ -1,10 +1,15 @@
 package com.example.angulardemo.service;
 
-import com.example.angulardemo.entity.User;
+import java.util.Map;
+import java.util.Optional;
 
-public interface UserService {
+import com.example.angulardemo.entity.Employee;
 
-	public Iterable<User> getUser();
-	public boolean addUser(User user);
-	
+public interface EmployeeService {
+
+	public Iterable<Employee> getEmployee();
+	public Employee createEmployee(Employee employee);
+	public Optional<Employee> getEmployeeById(Long id);
+	public Employee updateEmployee(Long id, Employee employeeDetails);
+	public Map<String, Boolean> deleteEmployee(Long id);
 }
